@@ -30,7 +30,6 @@ In this lab, we will create models using the text of each website to evaluate wh
 
 Here's a link to the [starter code](./code/starter-code/starter-code.ipynb)
 
-> [Solution code found here](./code/solution-code/solution-code.ipynb)
 
 #### Deliverable
 
