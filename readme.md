@@ -1,32 +1,40 @@
 ---
-title: train_test_split
+title: Logistic Regression and Regularization Scikit-Learn Lab
 type: lab
 duration: "1:25"
 creator:
-    name: Jonathan Balaban
-    city: ATL
+    name: Arun Ahuja
+    city: NYC
 ---
 
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Sklearn & Project 4
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Logistic Regression and Regularization Scikit-Learn Lab
 
-## Introduction
+## Exercise
 
-For this lab we'll be working on our Project 4 dataset. Your goal is to split the data, then run Logistic Regression using sklearn. After this, you'll evaluate and tune your model.
+Once, again we will attempt to predict when a website is 'evergreen'. However, this time we will use scikit-learn model _with regularization_. We will compare how the learned coefficients change under different regularization schemes. 
+
+> From Week 4: Lab 2.2
+These are websites that always relevant like recipes or reviews (as opposed to current events) This dataset comes from [stumbleupon](https://www.stumbleupon.com/), a web page recommender and was made available [here](https://www.kaggle.com/c/stumbleupon/download/train.tsv).  Webpages that are evergreen can always be recommended, however current events or seasonal stories can only be recommended at a specific time. For this reason, we'd like to identify websites that 'evergreen'. In this dataset, we have attributes about the website, for example, the text content, how many images or HTML elements it has, how many links it has etc.
+
+
+In this lab, we will create models using the text of each website to evaluate whether or not the website is evergreen. Of course, not all of the words are relevant to this task. For example, almost every website will have the word 'link' somewhere - and it's unlikely that it effects whether or not the website is evergreen. How we can determine the most relevant features? Use regularization!
+
+#### Requirements
+- Practice using `scikit-learn` to run logistic regression to predict which sites are evergreen in the StumbleUpon dataset
+- Compare `L1` or `Lasso` regularization with `L2` or `Ridge` regularization 
+    - How do these effect the learned coefficients?
+    - How do these effect the performance of the model using standard classification metrics?
 
 
 #### Starter code
 
-For this lab, you will be using your own notebook for the Project 4 dataset.
+Here's a link to the [starter code](./code/starter-code/starter-code.ipynb)
 
-However, we have provided an example of the type of approach you should take, using the standard IRIS dataset. Please use this as a reference when working on your Project 4 dataset.
-
-- IRIS [Demo Code Reference for Lab 4.2](./code/)
+> [Solution code found here](./code/solution-code/solution-code.ipynb)
 
 #### Deliverable
 
-Perform Logistic Regression on your Project 4 dataset! See Project 4 for more details.
+- Build a logistic regression model in `scikit-learn`
+- Examine the coefficients and performance for the different regularization schemes
+- Create a writeup on the interpretation of findings including an executive summary with conclusions and next steps
 
-## Additional Resources
-
-- [Examples of Train/Test Split using Sklearn](http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.train_test_split.html)
-- [Running Train/Test split on Text Data](http://stackoverflow.com/questions/25793887/how-to-split-data-raw-text-into-test-train-sets-with-scikit-crossvalidation-mo)
